@@ -14,6 +14,7 @@ gunicorn
 lk21
 lxml
 pillow
+flask
 psutil
 psycopg2-binary
 pybase64
