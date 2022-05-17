@@ -594,6 +594,13 @@ except KeyError:
     logging.info('No using INTELLIVOID_ANTISPAM')
     INTELLIVOID_ANTISPAM = None
 
+try:
+    IMAGE_URL = getConfig('IMAGE_URL')
+    if len(IMAGE_URL) == 0:
+        IMAGE_URL = 'https://telegra.ph/file/6837b00829323edbca372.jpg'
+except KeyError:
+    IMAGE_URL = 'https://telegra.ph/file/6837b00829323edbca372.jpg'    
+    
 updater = tgUpdater(token=BOT_TOKEN)
 bot = updater.bot
 dispatcher = updater.dispatcher
